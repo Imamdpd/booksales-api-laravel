@@ -9,9 +9,9 @@ class GenreController extends Controller
     public function index()
     {
         // Mengambil data genre dari model Genre
-        $genres = (new Genre)->getGenres();
+        $genres = Genre::all();
 
         // Mengirim data genre ke view 'genres.index'
-        return view('genres.index', compact('genres'));
+        return view('genres.index', ['genres'=> $genres]);
     }
 }

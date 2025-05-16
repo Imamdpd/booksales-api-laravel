@@ -12,7 +12,9 @@
     <!-- Looping data author -->
     @foreach ($authors as $author)
         <ul>
+            <li>{{ $author['id'] }}</li>
             <li>{{ $author['name'] }}</li>
+            <li>{{ $author['bio'] }}</li>
         </ul>
     @endforeach
 </body>

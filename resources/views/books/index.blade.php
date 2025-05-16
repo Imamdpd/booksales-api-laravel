@@ -13,7 +13,11 @@
     <!-- Looping data book -->
     @foreach ($books as $book)
         <ul>
+            <li>{{ $book['id'] }}</li>
             <li>{{ $book['title'] }}</li>
+            <li>{{ $book['description'] }}</li>
+            <li>{{ $book['price'] }}</li>
+            <li>{{ $book['stock'] }}</li>
         </ul>
     @endforeach
 </body>

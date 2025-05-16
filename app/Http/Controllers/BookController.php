@@ -9,9 +9,9 @@ class BookController extends Controller
     public function index()
     {
         // Mengambil data book dari model Book
-        $books = (new Book)->getBooks();
+        $books = Book::all();
 
         // Mengirim data book ke view
-        return view('books.index', compact('books'));
+        return view('books.index', ['books' => $books]);
     }
 }
