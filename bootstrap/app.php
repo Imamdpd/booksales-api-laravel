@@ -1,5 +1,11 @@
 <?php
 
+use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Configuration\Exception;
+use Illuminate\Foundation\Configuration\Middleware;
+use App\Http\Middleware\CheckRole;
+
+
 /*
 |--------------------------------------------------------------------------
 | Create The Application
