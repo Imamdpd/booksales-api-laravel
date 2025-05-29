@@ -17,7 +17,7 @@ class CheckRole
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    protected function redirectTo(Request $request, Closure $next, ...$roles): Response
+    public function handle(Request $request, Closure $next, ...$roles): Response
     {
         try {
             $user = JWTAuth::parseToken()->authenticate();
